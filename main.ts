@@ -12,5 +12,23 @@ enum blik {
 }
 
 enum richting {
+    omhoog,
+    vooruit,
+    omlaag
+}
+
+//% color="#AA278d" weight=100 icon="\uf544"
+
+namespace robot {
+    //% block
+    export function rechterarm(kies:richting):void {
+        if (kies == richting.omhoog)
+           pins.servoWritePin(AnalogPin.P0,180)
+        else if (kies == richting.omlaag)
+           pins.servoWritePin(AnalogPin.P0,0)
+        else if (kies == richting.vooruit)
+           pins.servoWritePin(AnalogPin.P0,90)
+
+    }
     
 }
