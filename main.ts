@@ -23,7 +23,7 @@ enum richtingLinks {
     omlaag = 180
 }
 
-//% color="#AA278d" weight=100 icon="\uf544
+//% color="#AA278d" weight=100 
 
 namespace robot {
 /*
