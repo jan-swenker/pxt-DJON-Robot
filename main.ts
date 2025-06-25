@@ -32,12 +32,14 @@ namespace robot {
     export function rechterarm(kies:richtingRechts):void {
       pins.servoWritePin(AnalogPin.P0,kies)
     }
+
     //% blockId = robotlinkerarm
     //% block = "linkerarm $kies"
     //% weight=85
     export function linkerarm(kies:richtingLinks): void {
       pins.servoWritePin(AnalogPin.P2,kies)
     }
+    
     //% blockId = robothoofd
     //% block = "hoofd $kies"
     //% weight=80
