@@ -35,7 +35,7 @@ namespace robot {
     
     //% blockId = robothoofd
     //% block = "hoofd $kies1"
-    //% weight=19
+    //% weight=100
     export function hoofd(kies1:blik): void {
       pins.servoWritePin(AnalogPin.P1,kies1)
     }
@@ -47,7 +47,7 @@ namespace robot {
 */
     //% blockId = robotrechterarm
     //% block = "rechterarm $kies2"
-    //% weight=18
+    //% weight=60
     export function rechterarm(kies2:richtingRechts):void {
       pins.servoWritePin(AnalogPin.P0,kies2)
     }
@@ -59,7 +59,7 @@ namespace robot {
     
     //% blockId = robotlinkerarm
     //% block = "linkerarm $kies3"
-    //% weight=17
+    //% weight=30
     export function linkerarm(kies3:richtingLinks): void {
       pins.servoWritePin(AnalogPin.P2,kies3)
     }
