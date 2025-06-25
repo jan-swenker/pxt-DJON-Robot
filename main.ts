@@ -30,5 +30,18 @@ namespace robot {
            pins.servoWritePin(AnalogPin.P0,90)
 
     }
+    //% block
+    export function linkerarm(kies:richting): void {
+        if (kies == richting.omhoog)
+           pins.servoWritePin(AnalogPin.P2,0)
+        else if(kies == richting.omlaag)
+           pins.servoWritePin(AnalogPin.P2,180)
+        else if (kies == richting.vooruit)
+           pins.servoWritePin(AnalogPin.P2,90)
+    }
+    //% block
+    export function hoofd(kies:blik): void {
+        pins.servoWritePin(AnalogPin.P1,kies)
     
+    }
 }
