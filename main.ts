@@ -34,7 +34,7 @@ namespace robot {
     
     //% blockId = robothoofd
     //% block = "hoofd $kies"
-    //% weight=80
+    //% weight=95
     export function hoofd(kies:blik): void {
       pins.servoWritePin(AnalogPin.P1,kies)
     }
