@@ -27,17 +27,17 @@ enum richtingLinks {
 
 namespace robot {
     //% blockId = robotrechterarm
-    //% block = "rechterarm"
+    //% block = "rechterarm $kies"
     export function rechterarm(kies:richtingRechts):void {
       pins.servoWritePin(AnalogPin.P0,kies)
     }
     //% blockId = robotlinkerarm
-    //% block = "linkerarm"
+    //% block = "linkerarm $kies"
     export function linkerarm(kies:richtingLinks): void {
       pins.servoWritePin(AnalogPin.P2,kies)
     }
     //% blockId = robothoofd
-    //% block = "hoofd"
+    //% block = "hoofd $kies"
     export function hoofd(kies:blik): void {
       pins.servoWritePin(AnalogPin.P1,kies)
     
