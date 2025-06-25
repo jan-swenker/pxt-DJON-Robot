@@ -26,7 +26,20 @@ enum richtingLinks {
 //% color="#AA278d" weight=100 icon="\uf544
 
 namespace robot {
+/*
+*  hoofd blok
+*
+*/
 
+    
+    //% blockId = robothoofd
+    //% block = "hoofd $kies"
+    //% weight=80
+    export function hoofd(kies:blik): void {
+      pins.servoWritePin(AnalogPin.P1,kies)
+    }
+
+    
 /*
 *  rechterarm blok
 *
@@ -50,17 +63,5 @@ namespace robot {
       pins.servoWritePin(AnalogPin.P2,kies)
     }
 
-/*
-*  hoofd blok
-*
-*/
 
-    
-    //% blockId = robothoofd
-    //% block = "hoofd $kies"
-    //% weight=80
-    export function hoofd(kies:blik): void {
-      pins.servoWritePin(AnalogPin.P1,kies)
-    
-    }
 }
