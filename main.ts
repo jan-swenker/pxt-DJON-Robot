@@ -11,37 +11,32 @@ enum blik {
     vooruit = 90
 }
 
-enum richting {
-    omhoog,
-    vooruit,
-    omlaag
+enum richtingRechts {
+    omhoog = 180,
+    vooruit = 90,
+    omlaag = 0
+}
+
+enum richtingLinks {
+    omhoog = 0,
+    vooruit = 90,
+    omlaag = 180
 }
 
 //% color="#AA278d" weight=100 icon="\uf544"
 
 namespace robot {
     //% block
-    export function rechterarm(kies:richting):void {
-        if (kies == richting.omhoog)
-           pins.servoWritePin(AnalogPin.P0,180)
-        else if (kies == richting.omlaag)
-           pins.servoWritePin(AnalogPin.P0,0)
-        else if (kies == richting.vooruit)
-           pins.servoWritePin(AnalogPin.P0,90)
-
+    export function rechterarm(kies:richtingRechts):void {
+      pins.servoWritePin(AnalogPin.P0,kies)
     }
     //% block
-    export function linkerarm(kies:richting): void {
-        if (kies == richting.omhoog)
-           pins.servoWritePin(AnalogPin.P2,0)
-        else if(kies == richting.omlaag)
-           pins.servoWritePin(AnalogPin.P2,180)
-        else if (kies == richting.vooruit)
-           pins.servoWritePin(AnalogPin.P2,90)
+    export function linkerarm(kies:richtingLinks): void {
+      pins.servoWritePin(AnalogPin.P2,kies)
     }
     //% block
     export function hoofd(kies:blik): void {
-        pins.servoWritePin(AnalogPin.P1,kies)
+      pins.servoWritePin(AnalogPin.P1,kies)
     
     }
 }
