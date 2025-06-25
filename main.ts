@@ -4,6 +4,7 @@
  * Linkerarm op  P2
  * Rechterarm op P0
  * Hoofd op      P1
+ * 
  */
 enum blik {
     links =  180,
